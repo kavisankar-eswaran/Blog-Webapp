@@ -20,7 +20,7 @@ export const post =  {
             validation: (Rule: Rule) => Rule.required().error("Required")  
         },
         {
-            name: "publishedat",
+            name: "publishedAt",
             title: "Published At",
             type: "datetime",
             InitialValue: () => new Date().toISOString(),
@@ -43,6 +43,13 @@ export const post =  {
                 }
             ],
         },
-     ]
+        {
+            name: 'tags',
+            title: 'Tags',
+            type: "array",
+            of: [{ type: 'reference', to: [{ type: "tag" }] }],
 
-}
+        },
+     ],
+
+};
