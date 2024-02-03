@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Rethink_Sans } from "next/font/google";
+import { Mulish } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { Provider } from "../utils/Provider";
 
-const firaCode = Rethink_Sans({ subsets: ["latin"] });
+const firaCode = Mulish({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kavisankar Eswaran's Blog Posts",
